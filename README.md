@@ -46,6 +46,16 @@ OPENAI_API_KEY=your_openai_api_key
 TAVILY_API_KEY=your_tavily_api_key
 ```
 
+### Configuration in `tools.py`
+
+In `tools.py`, you can configure which search tool to use by modifying the `get_tools` function:
+
+```python
+def get_tools():
+    # return [internet_search]   # Uncomment this and comment the line below to use Tavily instead of DuckDuckGo Search.
+    return [internet_search_DDGO, process_content]  # Uncomment this and comment the line above to use DuckDuckGo Search instead of Tavily.
+```
+
 ## Usage
 
 ### Streamlit Interface
